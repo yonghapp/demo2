@@ -9,26 +9,37 @@
 	margin: 0;
 	padding: 0;
 }
+html{
+	font-size: 10rem;
+}
 body{
 	background: #000;
 }
 .wrap{
-	width: 322px;
-	height:600px;
-	margin: 30px auto;
+	width: 16.1rem;
+	height:30rem;
+	margin: 1.6rem auto;
 }
 .top{
-	width: 322px;
-	height:42px;
+	width: 16.1rem;
+	height:2.1rem;
+}
+.top img{
+	width: 100%;
+	height: 100%;
 }
 .top2{
-	width: 322px;
-	height:20px;
+	width: 16.1rem;
+	height:1rem;
+}
+.top2 img{
+	width: 100%;
+	height: 100%;
 }
 .mid{
 	position: relative;
-	width: 320px;
-	height:488px;
+	width: 16rem;
+	height:24.4rem;
 	border-left: 1px solid #fff;
 	border-right: 1px solid #fff;
 	background: url(images/2.jpg) no-repeat center;
@@ -37,10 +48,10 @@ body{
 .mid a{
 	position: absolute;
 	left:50%;
-	bottom: 20px;
-	margin-left:-25px;
-	width: 50px;
-	height: 50px;
+	bottom: 1rem;
+	margin-left:-1.25rem;
+	width: 2.5rem;
+	height: 2.5rem;
 	display: block;
 	background: url(images/normalmusic.svg) no-repeat center;
 	background-size:cover;
@@ -54,8 +65,12 @@ body{
 	color:#fff;
 }
 .bot{
-	width: 320px;
-	height:47px;
+	width: 16rem;
+	height:2.35rem;
+}
+.bot img{
+	width: 100%;
+	height: 100%;
 }
 .roate{
 	animation: rot 5s linear infinite;
@@ -108,6 +123,19 @@ body{
 		<audio src="music/10.mp3" id="music"></audio>
 	</div>
 	<script type="text/javascript">
+		size();
+          window.onresize=function(){
+            size();
+          };
+          function size(){
+            var html=document.getElementsByTagName('html')[0];
+            html.style.fontSize=10*(window.innerWidth/320)+"px";
+            if(window.innerWidth=="320px"){
+              window.innerWidth="320px";
+            }
+          }
+
+
 	var btn=document.getElementById('btn');
 	var music=document.getElementById('music');
 	var txt=document.getElementById('txt');
